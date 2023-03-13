@@ -1,0 +1,165 @@
+body {
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+}
+
+.center {
+    position: absolute;
+    width: 1200px;
+    height: 726px;
+    background-color: aquamarine;
+}
+
+
+function message() 
+{
+    alert("Cutie");
+}
+function message1() 
+{
+    alert("Hi");
+}
+function message() 
+{
+    alert("Hello");
+}
+function message1() 
+{
+    alert("Move");
+}
+function message2() 
+{
+    alert("Press any key in keyboard!");
+}
+function message3() 
+{
+    alert("Press and release any key in keyboard!");
+}
+function message4() 
+{
+    alert("Press key in keyboard!");
+}
+function submitMessage() 
+{
+    alert("Form Submitted!");
+    document.getElementById("form").style.display = "none";
+}
+function loadMessage() 
+{
+    document.getElementById("form").style.display = "blue";
+}
+
+function colorChange() 
+{
+    document.getElementById("this").style.backgroundColor = "pink";
+}
+
+
+
+function windowResize() {
+    var w = window.outerWidth;
+    var h = window.outerHeight;
+    var txt = "window size: width" + w + ", height: " + h;
+    document.getElementById("here").style.width = w;
+}
+window.onresize = windowResize;
+
+
+function dailyMessage() {
+    var now = new Date();
+    var dateOfTheweek = now.getDay();
+
+    if(dateOfTheweek == 0)
+    {
+        alert("Have a Nice Weekend!");
+    }
+
+    else if(dateOfTheweek == 1)
+    {
+        alert(" Monday!");
+    }
+
+    else if(dateOfTheweek == 2)
+    {
+        alert("Have a Good Tuesday!!!");
+    }
+
+    else if(dateOfTheweek == 3)
+    {
+        alert("Web Day! Its Wednesday!");
+    }
+
+    else if(dateOfTheweek == 4)
+    {
+        alert("Have a Good Thursday!!!");
+    }
+
+    else if(dateOfTheweek == 5)
+    {
+        alert("Yey! Its Friday!");
+    }
+
+    else if(dateOfTheweek == 6)
+    {
+        alert(" Its Saturday!");
+    }
+
+    else
+    {
+        alert("Have a Nice Day!!!");
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <link rel="stylesheet" href="exercise.css">
+    <script src="exercise.js"></script>
+</head>
+<body> <onkeypress="message4()
+<body onload="dailyMessage()"> <onkeypress="message4()" 
+
+    <p oncontextmenu="message()">Right Click</p>
+    <a href="#" oncontextmenu="message1()">Click Me</a>-->
+
+    <label for="sample">Input Box:</label>
+    <input id="this" type="text" onblur="colorChange()">
+
+    <fieldset>
+        <form action="#" onsubmit="submitMessage()">
+        <caption>Form</caption>
+        <br>
+        <label for="name">Enter Fullname:</label>
+        <input type="text" name="Fullname" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    </fieldset>
+    
+    <h1 id="here"></h1>
+    <center>
+    <div id="form" class="center" onresize="windowResize()">
+        <fieldset>
+            <form action="#" onsubmit="submitMessage()">
+            <caption>Form</caption>
+            <br>
+            <label for="name">Enter Fullname:</label>
+            <input type="text" name="Fullname" required>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        </fieldset>
+    </div>
+    </center>
+    
+</body>
+</html>
+
+
